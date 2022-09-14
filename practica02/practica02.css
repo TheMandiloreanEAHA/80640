@@ -1,0 +1,63 @@
+/* Aolica a todo elemento html */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#sp2{
+    color: rgb(10, 238, 181);
+
+}
+
+#sp1{
+    /*margin: 0px; Distancia entre cada elemento */
+    /*padding: 10px; El relleno del elemento */
+    color: black;
+}
+
+/* Aplicar estilo a todos los span que esten dentro de un parrafo(p) */
+p span{
+    color: crimson;
+}
+
+/* Aplicar estilo a clases */
+.fuente{
+    font-size: large
+    ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Despues de todos los span, da un enter */
+span::after{
+    content: '\A'; white-space: pre;
+}
+
+p.center{
+    text-align: center;
+    color: darkorchid;
+    
+}
+
+h1{
+    background-color: chocolate;
+    text-align: center;
+    margin: 20px,30px;
+    padding: 20px;
+    position: relative;
+
+}
+h1::before{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: chartreuse;
+    transition-property: width;
+    transition-duration: 3s;
+}
+
+h1:hover::before{
+    width: 100%;
+}
