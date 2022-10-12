@@ -14,26 +14,51 @@
             var e = document.getElementById("texto");
             e.style.color = color;
         }
+        
         function cambiarColor2(color) {
             console.log("El color recibido es: ",color, "😂");
             var e = document.getElementById("texto2");
             e.style.color = color;
         }
+
         function cambiarColores(color) {
             let c = document.getElementsByTagName("p");
+            //---------for------------
             // for (let index = 0; index < c.length; index++) {
             //     //const element = array[index];
             //     c[index].style.color = color;
             // }
-            var arr = [].slice.call(c);
-            arr.forEach(element => {
-                console.log(element);
 
-            });
+            //-------for each---------
+            // var arr = [].slice.call(c);
+            // arr.forEach(element => {
+            //     console.log(element);
+            // });
             
+            //---------for in---------
+            // var arr = [].slice.call(c);
+            // for (const x in c) {
+            //     console.log(x);
+            // }
+            // let i = 0;
+            // for (let x in c){
+            //     if(i <  c.length){
+            //         c[x].style.color = "blue";
+            //         i++;
+            //     }
+            //}
+
+            for (const x in c) {
+                console.log(x)
+                if (c.hasOwnProperty.call(c, x)) {
+                    const element = c[x].style.color = "Orange";
+                }
+            }
         }
     </script>
 </head>
+
+
 <body>
     <!-- p#texto{simple texto}+(button[onclick=cambiarColor\(\'yellow\'\)])*2 -->
     <p id="texto">simple texto1</p>
@@ -43,4 +68,5 @@
     <button onclick="cambiarColor('red'), cambiarColor2('brown')">Rojo</button>
     <button onclick="cambiarColores('orange')">Colores</button>
 </body>
+
 </html>
