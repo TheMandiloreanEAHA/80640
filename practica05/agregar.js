@@ -54,13 +54,9 @@ function buscar4() {
     listaTodo = document.getElementsByTagName("li")
     for (const tarea in listaTodo) {
         if (Object.hasOwnProperty.call(listaTodo, tarea)) {
-            const element = listaTodo[tarea];
-            console.log(element)
-            if(leer() == tarea.textContent){
+            if(leer() == listaTodo[tarea].childNodes[0]){
                 console.log("Ya existe")
-            }else{
-                alert("OJITO EH! Que NO existe esa madre")
-            }        
+            }
         }
     }
 }
