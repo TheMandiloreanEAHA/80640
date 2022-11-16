@@ -11,7 +11,7 @@ import com.google.gson.*;
  * Hello world!
  *
  */
-public class App{
+public class AppDb{
     public static Gson gson = new Gson();
     //Base de datos en memoria
     public static Map<String, Usuario> usuarios = new HashMap<>();  
